@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Crear cuenta - Quick Economy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <!-- Incluye el CSS de SweetAlert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- Incluye el script de SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+
+  <!-- Favicons -->
+  <link href="../img/logofinal.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../vendor/aos/aos.css" rel="stylesheet">
+  <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="starter-page-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">quickeconomy@org.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+593 834 323 989</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="../index.html" class="logo d-flex align-items-center">
+          <img src="../img/logofinal.png" alt="">
+          <h1 class="sitename">Quick Economy</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="../index.html" class="">Inicio</a></li>
+            <li><a href="../index.html">Sobre Nosotros</a></li>
+            <li><a href="../index.html">Contacto</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+
+    </div>
+
+  </header>
+
+  <main class="main">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- Section Title -->
+<div class="container section-title row mt-5 col-md-4 mx-auto" data-aos="fade-up">
+    <span class=""> Crear Cuenta<br></span>
+    <div class="signup-container">
+      <form id="signup-form">
+        <h2 class="mb-4 text-center"> <i class="bi bi-person-circle">      </i>        Crear Cuenta</h2>
+        <div class="form-group p-4 shadow rounded bg-light">
+          
+          <label for="firstName">Nombres:</label>
+          <input type="text" id="firstName" name="firstName" class="form-control" required autofocus>
+          
+          <br>
+          
+          <label for="lastName">Apellidos:</label>
+          <input type="text" id="lastName" name="lastName" class="form-control" required>
+          
+          <br>
+          
+          <label for="phone"><i class="bi bi-phone">        </i>        Teléfono:</label>
+          <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" class="form-control" required placeholder="+1 998 234 212" title="Ingrese un número de teléfono válido (10 dígitos numéricos).">
+          
+          <br>
+          
+          <label for="username"><i class="bi bi-person-add">        </i>        Nombre de Usuario:</label>
+          <input type="text" id="username" name="username" pattern="[a-zA-Z0-9]+" class="form-control" required >
+          
+          <br>
+          
+          <label for="password">Contraseña:</label>
+          <input type="password" id="password" name="password" pattern=".{8,}" class="form-control" required title="La contraseña debe tener al menos 8 caracteres.">
+          
+          <br>
+          
+          <label for="confirmPassword">Repetir Contraseña:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" required title="Por favor, repita la contraseña">
+          
+          <br>
+          
+          <label for="email"><i class="bi bi-envelope">     </i>        Correo Electrónico:</label>
+          <input type="email" id="email" name="email" class="form-control" required title="Ingrese una dirección de correo electrónico válida." placeholder="example@aaa.com">
+          
+        </div>
+        <button type="submit" class="btn btn-danger btn-block mt-4">Crear Cuenta</button>
+      </form>
+      <p class="create-account-link mt-3 text-center">¿Ya tienes una cuenta? <a href="login.html">Iniciar Sesión</a></p>
+    </div>
+  </div>
+  <!-- End Section Title -->
+  </section>
+  <!-- /Starter Section Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container copyright text-center mt-4">
+      <p>© <span>GRUPO 2</span> <strong class="px-1 sitename">Day</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://chat.whatsapp.com/JThuMfBDmwP4Pv1YYmCxvK">Grupo 2</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/php-email-form/validate.js"></script>
+  <script src="../vendor/aos/aos.js"></script>
+  <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../js/main.js"></script>
+  <script src="../js/signup.js"></script>
+
+</body>
+
+</html>

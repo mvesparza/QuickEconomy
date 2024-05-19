@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Sistema - Quick Economy</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Incluye el CSS de SweetAlert -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- Incluye el script de SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+  <!-- Incluye el script para la creación de reportes -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+
+  <!-- Favicons -->
+  <link href="../img/logofinal.png" rel="icon">
+  <link href="../img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../vendor/aos/aos.css" rel="stylesheet">
+  <link href="../vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header fixed-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">quickeconomy@org.com</a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+593 834 323 989</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="../index.html #home" class="logo d-flex align-items-center">
+          <img src="img/logo.png" alt="">
+          <h1 class="sitename">Quick Economy</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><button id="logout-btn" class="btn btn-danger" ><i class="bi bi-box-arrow-right">   </i>    Cerrar Sesión</button></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+      </div>
+
+    </div>
+
+  </header>
+  <br> <br> <br> <br> <br> <br> <br> <br>
+  <main class="main">
+    <!-- Section Title -->
+    <div class="container section-title row col-md-4 mx-auto" data-aos="fade-up">
+        <span class="">Administrar Ingresos y Egresos<br></span>
+        <h2 class="mb-4 text-center">Administrar Ingresos y Egresos</h2>
+    </div>
+    <!-- End Section Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">  
+        <div class="container" data-aos="fade-up" data-aos-delay="100">  
+          <div class="row gy-4 mt-1">
+
+            <div class="col-lg-6">
+                <form  class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Ingresos: <i class="bi bi-currency-dollar"></i><a id="totalIngresos">0.00</a></h3>
+                        </div>
+                            <div class="col">
+                            <button class="btn btn-secondary" type="button" id="agregarIngresoBtn">Agregar Ingreso</button>
+                        </div>
+                    </div>
+                    <div class="row gy-4">
+    
+                    <div class="col-md-6">
+                        <label for="fechaIngreso"><i class="bi bi-calendar-check">   </i>    Fecha:</label>
+                        <input type="checkbox" id="autoFechaIngreso" checked>
+                            <label for="autoFechaIngreso">Hoy</label>
+                            <input type="date" class="form-control" id="fechaIngreso" required>
+                    </div>
+    
+                    <div class="col-md-6 ">
+                        <label><i class="bi bi-cash">   </i>    Monto:</label>
+                        <input type="number" class="form-control" id="montoIngreso" min="0" step="0.01" required placeholder="0.00 $">
+                    </div>
+    
+                    <div class="col-md-12">
+                        <label><i class="bi bi-journal-text">   </i>    Descripción:</label>
+                        <input type="text" class="form-control" id="descripcionIngreso" required>
+                    </div>
+
+                    <div class="col-md-12">
+                        <label><i class="bi bi-person-raised-hand"> </i>    Persona:</label>
+                        <input type="text" class="form-control" id="personaIngreso" placeholder="Realizado por" required>
+                    </div>
+        
+                  </div>
+                </form>
+              </div>
+  
+            <div class="col-lg-6">
+                <form  class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+                    <div class="row">
+                        <div class="col">
+                            <h3>Egresos: <i class="bi bi-currency-dollar"></i><a id="totalEgresos">0.00</a></h3>
+                        </div>
+                            <div class="col">
+                                <button class="btn btn-secondary" type="button" class="bu" id="agregarEgresoBtn">Agregar Egreso</button>
+                        </div>
+                    </div>
+                <div class="row gy-4">
+  
+                  <div class="col-md-6">
+                    <label for="fechaEgreso"><i class="bi bi-calendar-check">   </i>    Fecha:</label>
+                    <input type="checkbox" id="autoFechaEgreso" checked>
+                            <label for="autoFechaEgreso">Hoy</label>
+                            <input class="form-control" type="date" id="fechaEgreso" required>
+                  </div>
+  
+                  <div class="col-md-6 ">
+                    <label><i class="bi bi-cash">   </i>    Monto:</label>
+                    <input type="number" class="form-control" id="montoEgreso" min="0" step="0.01" required placeholder="0.00 $">
+                </div>
+
+                <div class="col-md-12">
+                    <label><i class="bi bi-journal-text">   </i>    Descripción:</label>
+                    <input type="text" class="form-control" id="descripcionEgreso" required>
+                </div>
+
+                <div class="col-md-12">
+                    <label><i class="bi bi-person-raised-hand"> </i>    Persona:</label>
+                    <input type="text" class="form-control" id="personaEgreso" placeholder="Realizado por" required>
+                </div>
+  
+                </div>
+              </form>
+            </div><!-- End Contact Form -->
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /Contact Section -->
+    <div class="table-responsive">
+      <table class="table align-middle" id="movimientos-table">
+        <thead>
+          <tr>
+            <th scope="col">Fecha</th>
+            <th scope="col">Mes</th>
+            <th scope="col">Descripción</th>
+            <th scope="col">Monto</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Persona</th>
+            <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <button id="reporte-btn" class="btn btn-success">Generar Reporte</button>
+    </div>
+  </main>
+
+  <footer id="footer" class="footer position-relative">
+    <div class="container copyright text-center mt-4">
+      <p>© <span>GRUPO 2</span> <strong class="px-1 sitename">Day</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        Designed by <a href="https://chat.whatsapp.com/JThuMfBDmwP4Pv1YYmCxvK">Grupo 2</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/php-email-form/validate.js"></script>
+  <script src="../vendor/aos/aos.js"></script>
+  <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../js/main.js"></script>
+  <script src="../js/sistema.js"></script>
+
+</body>
+
+</html>
